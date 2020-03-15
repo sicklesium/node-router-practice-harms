@@ -9,7 +9,7 @@ module.exports = {
 }
 
 async function insert(quote) {
-    return db('quotes').insert(quote).returning("*")
+    return db('quotes').insert(quote)
 }
 function findById(id) {
     return db('quotes')
