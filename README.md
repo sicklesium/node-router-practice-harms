@@ -8,14 +8,18 @@ A gremlin has deleted vital parts of the quotes api. We need you to put it back 
 
 2. Write one piece of custom middleware. This can be a logger, a validator, anything.
 
+3. Deploy the qutoes API to heroku
+
 ### Spec:
 
+Working Deployments: 
 https://tl-hours-mike-quotes.herokuapp.com   
 
 ```
 Endpoints:
       GET: /quotes
       POST: /quotes
+      GET: /quotes/:id
       PUT: /quotes/:id
       DELETE: /quotes/:id
 ```
