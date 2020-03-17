@@ -18,8 +18,8 @@ https://tl-hours-mike-quotes.herokuapp.com
 ```
 Endpoints:
       GET: /quotes
-      POST: /quotes
       GET: /quotes/:id
+      POST: /quotes
       PUT: /quotes/:id
       DELETE: /quotes/:id
 ```
