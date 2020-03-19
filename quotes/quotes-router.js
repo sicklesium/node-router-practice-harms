@@ -42,4 +42,30 @@ router.post("/", (req, res) => {
         })
 })
 
+router.put("/:id", (req, res) => {
+    const { id } = req.params;
+    const changes = req.body;
+    const info = req.body;
+
+    Quotes.update(changes, id)
+        .then(newQuote => {
+            res.status(200).json({ newQuote, info })
+        })
+        .catch(err => {
+            res.status(500).json({ errorMessage: "There was an error saving your quote to the database" })
+        })
+})
+
+router.delete("/:id", (req, res) => {
+    const { id } = req.params;
+
+    Quotes.remove(id)
+        .then(quote => {
+            res.status(200).json({ message: "The quote has been removed" })
+        })
+        .catch(err => {
+            res.status(500).json({ errorMessage: "There was an error deleting your quote from the database" })
+        })
+})
+
 module.exports = router;
